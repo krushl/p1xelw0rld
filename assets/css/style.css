@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+@font-face {
+    font-family: 'karmafuture';
+    src: url('../fonts/karmafuture.eot');
+    src: local('☺'), url('../fonts/karmafuture.woff') format('woff'), url('../fonts/karmafuture.ttf') format('truetype'), url('../fonts/karmafuture.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PressStart2P-Regular';
+    src: url('../fonts/PressStart2P-Regular.eot');
+    src: local('☺'), url('../fonts/PressStart2P-Regular.woff') format('woff'), url('../fonts/PressStart2P-Regular.ttf') format('truetype'), url('../fonts/PressStart2P-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.loadScreen {
+    background-image: url(../img/bg.gif);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1000000;
+}
+.logoScreen__bg {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: grid;
+    justify-content: center;
+}
+
+.logoStart {
+    display: grid;
+}
+.logoMenu{
+    align-self:flex-end;
+    justify-self:center;
+}
+
+.logoMenu__text{
+    font-family: 'karmafuture';
+    color: #fff;
+    justify-content: center;
+    align-self: flex-end;
+    font-size: 112px;
+}
+
+.logoStart__text{
+    font-family: 'karmafuture';
+    color: #fff;
+    justify-content: center;
+    align-self: flex-end;
+    font-size: 200px;
+}
+.container{
+    background-image: url(../img/bg.gif);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.nav {
+    background-image: url(../img/bg.gif);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.start {
+    color: #fff;
+    align-self: center;
+    font-family: 'PressStart2P-Regular';
+    justify-self: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.menu{
+    font-family: 'PressStart2P-Regular';
+    color: #fff;
+    justify-content: center;
+    align-self: flex-end;
+    /* text-align: center; */
+    font-size: 170%;
+    padding: .5em;
+    
+}
+
+
+.arrow {
+    /* list-style-image: url(arrow.png); */
+    padding-left: 2rem;
+    background-image: url(../img/arrow.png);
+    background-position:left;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
+    -webkit-animation: blink1 3s linear infinite;
+    animation: blink1 3s linear infinite;
+}
+
+
+
+:focus {outline:none;}
+
+
+/*the animation */
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut
+
+}
+
+.animated-login {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.blink {
+    -webkit-animation: blink1 2s linear infinite;
+    animation: blink1 2s linear infinite;
+}
+
+
+
+/* login */
+
+.login-input{
+    font-family: 'PressStart2P-Regular';
+    width:100%;
+    padding: 12px 20px;
+    margin:8px 0;
+    box-sizing: border-box;
+    background-color: #111;
+    color:#fff;
+    border:2px solid #fff;
+    border-radius: 5px;
+
+}
+.login-label{
+    font-family: 'PressStart2P-Regular';
+    color: #fff;
+    font-size: 120%;
+    padding: .5em;
+    margin: 0 0 ;
+}
+
+.login-form{
+    display:grid;
+    grid-template-rows:repeat(5,1fr) ;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-btn{
+    background-color: #111;
+    color:#fff;
+    border:1px solid #fff;
+    border-radius: 5px;
+    font-family: 'PressStart2P-Regular';
+    font-size: 120%;
+    padding: .5em;
+}
+
+
+/*keyframes*/
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+        display: block;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        display: block;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes blink1 {
+    0% {
+        color: rgb(255, 255, 255);
+    }
+
+    50% {
+        color: rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        color: rgb(255, 255, 255);
+    }
+}
+
+@keyframes blink1 {
+    0% {
+        color: rgb(255, 255, 255);
+    }
+
+    50% {
+        color: rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        color: rgb(255, 255, 255);
+    }
+}
