@@ -18,12 +18,14 @@
     </div>
     <ul>
         <div id="navMenu">
-            <li class="menu" id="games" ><a href="/routes/games/index.php"">GAMES</a></li>
-            <li class="menu" id="emulators"><a href="/routes/emulators/index.php"">EMULATORS</a></li>
-            <li class="menu" id="options" ><a href="/routes/options/index.php"">OPTIONS</a></li>
-            <li class="menu" id="howToPlay"><a href="/routes/howToPlay/index.php"">HOW TO PLAY</a></li>
-            <li class="menu" id="about"><a href="/routes/about/index.php"">ABOUT</a></li>
+            <li class="menu" id="games" ><a href="/routes/games/index.php">GAMES</a></li>
+            <li class="menu" id="emulators"><a href="/routes/emulators/index.php">EMULATORS</a></li>
+            <li class="menu" id="options" ><a href="/routes/options/index.php">OPTIONS</a></li>
+            <li class="menu" id="howToPlay"><a href="/routes/howToPlay/index.php">HOW TO PLAY</a></li>
+            <li class="menu" id="about"><a href="/routes/about/index.php">ABOUT</a></li>
+            <?= $_SESSION['auth']?'<li class="menu" id="exit"><a href="/routes/login/index.php/?action=out">exit</a></li>':""?>
         </div>
+
     </ul>
 </div>
 
