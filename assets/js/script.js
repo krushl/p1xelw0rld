@@ -1,6 +1,7 @@
 let prev, current, next;
 let navMenu = document.querySelector("#navMenu");
 let loadScreen = document.querySelector('#loadScreen');
+let login = true;
 
 
 
@@ -20,28 +21,30 @@ loadScreen.focus();
 
 [prev,current,next]= initCurrent(navMenu);
 
+
 current.classList.add('arrow')
 // authentication
-let authentication = ['a','u','t','h','e','n','t','i','c','a','t','i','o','n'];
+// let authentication = ['a','u','t','h','e','n','t','i','c','a','t','i','o','n'];
 let authCodePosition=0;
 let auth =['a','u','t','h'];
 count = 0;
-
+console.log(loadScreen);
 document.body.addEventListener('keydown', function (e) {
-
+    count++;
     current.focus();
     requiredKey = auth[authCodePosition];
 
 
-    if(e.key ===requiredKey){
+    if(e.key === requiredKey){
         authCodePosition++;
-        if(authCodePosition===auth.length){
-            authComplete(navMenu);
+        if(authCodePosition===auth.length && login){
+            login = authComplete(navMenu);
             authCodePosition=0;
         }
     }
     if (e.key === 'ArrowDown') {
         goDown(navMenu);
+
         console.log(current);
     }
     if (e.key === 'ArrowUp') {
@@ -50,7 +53,7 @@ document.body.addEventListener('keydown', function (e) {
     }
 
     if(e.key === 'Enter')
-    {   count++;
+    {
         if(count>1) {
             switch (current.getAttribute('id')) {
                 case 'games':
@@ -71,6 +74,9 @@ document.body.addEventListener('keydown', function (e) {
                 case 'login':
                     location.href = "/routes/login/index.php";
                     break;
+                case 'exit':
+                    location.href = "/routes/login/index.php/?action=out";
+                    break;
 
             }
         }
@@ -90,8 +96,9 @@ document.body.addEventListener('mouseover',function (e){
 
 document.body.addEventListener('mouseout',function (e){
     if(e.target.closest('a')){
-        current.classList.add('arrow');
+
         e.target.closest('a').classList.remove('arrow');
+        current.classList.add('arrow');
 
     }
 })

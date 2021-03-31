@@ -45,4 +45,5 @@ function authComplete(element){
     audio.volume=0.05;
     audio.play();
     setTimeout(()=>['animated-login','fadeIn'].forEach(item=>li.classList.remove(item)),1000);
+    return false;
 }
