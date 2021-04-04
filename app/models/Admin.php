@@ -30,10 +30,15 @@ class Admin
 
     public function register($login, $password)
     {
+        if ($this->auth($login, $password)) {
+            return -1;
+        }
         $stmt = $this->pdo->prepare("INSERT INTO admin (login, password) VALUES (:login,:password)");
         $stmt->execute([
-            "login"=>$login,
+            "login" => $login,
             "password" => password_hash($password, PASSWORD_DEFAULT),
         ]);
+
+        return $this->pdo->lastInsertId();
     }
 }

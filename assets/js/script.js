@@ -88,6 +88,7 @@ document.body.addEventListener('keydown', function (e) {
 
 document.body.addEventListener('mouseover',function (e){
     if(e.target.closest('a')){
+        soundMenu();
         current.classList.remove('arrow');
         current = e.target.closest('a');
         e.target.closest('a').classList.add('arrow');

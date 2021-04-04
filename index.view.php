@@ -28,5 +28,5 @@
 
     </ul>
 </div>
-
+<!--<nosript><p class="">WHERe JAVASCRIPT</p></nosript>-->
 <?php include $_SERVER['DOCUMENT_ROOT']."/templates/footer.view.php";?>

@@ -27,7 +27,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #f4f4f4;
 }
 
 .loadScreen {
@@ -57,7 +57,7 @@ a {
 
 .logoMenu__text {
     font-family: 'karmafuture';
-    color: #fff;
+    color: #f4f4f4;
     justify-content: center;
     align-self: flex-end;
     font-size: 112px;
@@ -65,7 +65,7 @@ a {
 
 .logoStart__text {
     font-family: 'karmafuture';
-    color: #fff;
+    color: #f4f4f4;
     justify-content: center;
     align-self: flex-end;
     font-size: 200px;
@@ -94,7 +94,7 @@ a {
 
 
 .start {
-    color: #fff;
+    color: #f4f4f4;
     align-self: center;
     font-family: 'PressStart2P-Regular';
     justify-self: center;
@@ -106,7 +106,7 @@ ul {
 
 .menu {
     font-family: 'PressStart2P-Regular';
-    color: #fff;
+    color: #f4f4f4;
     justify-content: center;
     align-self: flex-end;
     /* text-align: center; */
@@ -123,14 +123,14 @@ ul {
     background-position: left;
     background-size: 1.6rem 1.6rem;
     background-repeat: no-repeat;
-    -webkit-animation: blink1 3s linear infinite;
-    animation: blink1 3s linear infinite;
+    /*-webkit-animation: blink1 3s linear infinite;*/
+    /*animation: blink1 3s linear infinite;*/
 }
 
 
-:focus {
-    outline: none;
-}
+/*:focus {*/
+/*    outline: none;*/
+/*}*/
 
 
 /*the animation */
@@ -165,6 +165,248 @@ ul {
     animation: blink1 2s linear infinite;
 }
 
+/*games*/
+.container-games {
+    display: grid;
+    min-width: 780px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0.8em;
+}
+
+.game {
+    font-family: PressStart2P-Regular;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f4f4f4;
+    width: 350px;
+    height: 160px;
+    background-color: #111;
+
+}
+
+.game:hover {
+    border: 4px solid #f4f4f4;
+}
+
+/*options*/
+.options {
+    border: 2px solid #f4f4f4;
+    background-color: #373737;
+    height: 75vh;
+    width: 780px;
+}
+
+.option-title {
+    display: flex;
+    justify-content: center;
+    border: 2px solid #f4f4f4;
+    padding: .5em;
+    background-color: #111111;
+    font-family: PressStart2P-Regular;
+    color: #f4f4f4;
+    letter-spacing: 5px;
+}
+
+.option-form {
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    padding:.5em;
+    grid-gap:0.5em;
+}
+.option-items{
+    display:grid;
+    grid-gap: .5em;
+    align-self: center;
+    justify-self:center;
+}
+.soundMenu {
+
+}
+
+.soundMenu-label {
+
+    font-family: PressStart2P-Regular;
+    color: #f4f4f4;
+    letter-spacing: 5px;
+}
+
+input[type=range] {
+    height: 10px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 2px 2px 4px #353535;
+    background: #f4f4f4;
+    border-radius: 0px;
+    border: 1px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 2px #353535;
+    border: 1px solid #000000;
+    height: 24px;
+    width: 10px;
+    border-radius: 0px;
+    background: #f4f4f4;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #f4f4f4;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 2px 2px 4px #353535;
+    background: #f4f4f4;
+    border-radius: 0px;
+    border: 1px solid #000000;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 2px #353535;
+    border: 1px solid #000000;
+    height: 24px;
+    width: 10px;
+    border-radius: 0px;
+    background: #f4f4f4;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #f4f4f4;
+    border: 1px solid #000000;
+    border-radius: 0px;
+    box-shadow: 2px 2px 4px #353535;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #f4f4f4;
+    border: 1px solid #000000;
+    border-radius: 0px;
+    box-shadow: 2px 2px 4px #353535;
+}
+
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 1px 1px 2px #353535;
+    border: 1px solid #000000;
+    height: 24px;
+    width: 10px;
+    border-radius: 0px;
+    background: #f4f4f4;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #f4f4f4;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #f4f4f4;
+}
+
+.switch {
+    position: relative;
+    width: 102px;
+}
+
+.switch input[type=checkbox] {
+    display: none;
+}
+
+.switch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #000000;
+    border-radius: 0px;
+}
+
+.switch-inner {
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.switch-inner:before, .switch-inner:after {
+    float: left;
+    width: 50%;
+    height: 28px;
+    padding: 0;
+    line-height: 28px;
+    font-size: 17px;
+    color: white;
+    font-family: PressStart2P-Regular;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.switch-inner:before {
+    content: "On";
+    padding-left: 14px;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.switch-inner:after {
+    content: "Off";
+    padding-right: 14px;
+    background-color: #f4f4f4;
+    color: #111111;
+    text-align: right;
+}
+
+.switch-click {
+    width: 30px;
+    margin: -1px;
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 72px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.switch-checkbox:checked + .switch-label .switch-inner {
+    margin-left: 0;
+}
+
+.switch-checkbox:checked + .switch-label .switch-click {
+    right: 0;
+}
 
 /* login */
 
@@ -175,15 +417,15 @@ ul {
     margin: 8px 0;
     box-sizing: border-box;
     background-color: #111;
-    color: #fff;
-    border: 2px solid #fff;
+    color: #f4f4f4;
+    border: 2px solid #f4f4f4;
     border-radius: 5px;
 
 }
 
 .login-label {
     font-family: 'PressStart2P-Regular';
-    color: #fff;
+    color: #f4f4f4;
     font-size: 120%;
     padding: .5em;
     margin: 0 0;
@@ -200,8 +442,8 @@ ul {
 
 .login-btn {
     background-color: #111;
-    color: #fff;
-    border: 1px solid #fff;
+    color: #f4f4f4;
+    border: 1px solid #f4f4f4;
     border-radius: 5px;
     font-family: 'PressStart2P-Regular';
     font-size: 120%;
@@ -210,58 +452,37 @@ ul {
 
 /*admin-panel*/
 .panel {
-    border: 2px solid #fff;
-    background-color:#111;
+    border: 2px solid #f4f4f4;
+    background-color: #111;
     width: 30vw;
     height: 50%;
-    padding:3.5em;
+    padding: 3.5em;
 
 }
-.panel-logo{
+
+.panel-logo {
     font-family: PressStart2P-Regular;
-    color:#fff;
-    padding:.5rem;
-    border-bottom:1px solid #fff;
-    border-left:1px solid #fff;
+    color: #f4f4f4;
+    padding: .5rem;
+    border-bottom: 1px solid #f4f4f4;
+    border-left: 1px solid #f4f4f4;
 }
 
-.panel-item{
+.panel-item {
     font-family: PressStart2P-Regular;
-    color:#fff;
-    padding:.5em;
+    color: #f4f4f4;
+    padding: .5em;
 
 }
 
-.panel-item:hover{
+.panel-item:hover {
     padding-left: 2rem;
     background-image: url(../img/arrow.png);
-    background-position:left;
+    background-position: left;
     background-size: 1.6rem 1.6rem;
     background-repeat: no-repeat;
 }
 
-/*games*/
-.container-games{
-    display:grid;
-    min-width: 780px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
-    grid-gap: 0.8em;
-}
-.game{
-    font-family:PressStart2P-Regular;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    color:#fff;
-    width: 350px;
-    height:160px;
-    background-color: #111;
-
-}
-.game:hover{
-    border:4px solid #fff;
-}
 
 /*keyframes*/
 @-webkit-keyframes fadeOut {
