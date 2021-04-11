@@ -21,6 +21,14 @@ class Platforms
         return $stmt->fetchAll();
     }
 
+    public function addPlatform($name)
+    {
+        $stmt=$this->pdo->prepare("INSERT INTO platforms (name) VALUE (:name) ");
+        $stmt->execute([
+            'name'=>$name
+        ]);
+    }
+
     public function editPlatform($id, $name)
     {
         $stmt = $this->pdo->prepare("UPDATE platforms SET name=:name WHERE id_platform=:id");
@@ -34,7 +42,7 @@ class Platforms
     {
         $stmt = $this->pdo->prepare("DELETE FROM platforms WHERE id_platform=:id");
         $stmt->execute([
-            "id"=>$id
+            "id" => $id
         ]);
     }
 

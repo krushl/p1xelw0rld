@@ -13,6 +13,21 @@ function soundMenu() {
     audio.play();
 }
 
+function soundEnter() {
+    const audio = new Audio("/assets/audio/S2_64.wav");
+    let volume = 0.05
+    audio.volume = volume;
+    audio.play();
+}
+
+function soundBack() {
+    const audio = new Audio("/assets/audio/S2_4C.wav");
+    let volume = 0.05
+    audio.volume = volume;
+    audio.play();
+
+}
+
 function goUp(element) {
     [prev, current, next] = [
         prev.previousElementSibling || element.lastElementChild,
@@ -57,3 +72,6 @@ function authComplete(element) {
     return false;
 }
 
+function accordeon(btn) {
+
+}

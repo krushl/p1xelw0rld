@@ -112,7 +112,7 @@ ul {
     /* text-align: center; */
     font-size: 170%;
     padding: .5em;
-
+    transition: 0.4s;
 }
 
 
@@ -210,19 +210,21 @@ ul {
 }
 
 .option-form {
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
-    padding:.5em;
-    grid-gap:0.5em;
+    padding: .5em;
+    grid-gap: 0.5em;
 }
-.option-items{
-    display:grid;
+
+.option-items {
+    display: grid;
     grid-gap: .5em;
     align-self: center;
-    justify-self:center;
+    justify-self: center;
 }
+
 .soundMenu {
 
 }
@@ -468,14 +470,28 @@ input[type=range]:focus::-ms-fill-upper {
     border-left: 1px solid #f4f4f4;
 }
 
-.panel-item {
+.panel-button {
+    background-color: #111;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
     font-family: PressStart2P-Regular;
     color: #f4f4f4;
     padding: .5em;
-
 }
 
-.panel-item:hover {
+.panel-item {
+    background-color: #111;
+    color: #f4f4f4;
+    padding: 0 .5em;
+    display: none;
+    overflow: hidden;
+}
+
+.panel-button:hover {
     padding-left: 2rem;
     background-image: url(../img/arrow.png);
     background-position: left;

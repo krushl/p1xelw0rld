@@ -2,7 +2,19 @@ let prev, current, next;
 let navMenu = document.querySelector("#navMenu");
 let loadScreen = document.querySelector('#loadScreen');
 let login = true;
+let panelBtn = document.querySelectorAll(".panel-button");
 
+
+for (let i = 0; i < panelBtn.length; i++) {
+    panelBtn[i].addEventListener('click', function () {
+        let panel = panelBtn[i].nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    })
+}
 
 
 
@@ -23,6 +35,7 @@ loadScreen.focus();
 
 
 current.classList.add('arrow')
+
 // authentication
 // let authentication = ['a','u','t','h','e','n','t','i','c','a','t','i','o','n'];
 let authCodePosition=0;
@@ -53,7 +66,7 @@ document.body.addEventListener('keydown', function (e) {
     }
 
     if(e.key === 'Enter')
-    {
+    {   soundEnter();
         if(count>1) {
             switch (current.getAttribute('id')) {
                 case 'games':
@@ -86,8 +99,8 @@ document.body.addEventListener('keydown', function (e) {
 });
 
 
-document.body.addEventListener('mouseover',function (e){
-    if(e.target.closest('a')){
+document.body.addEventListener('mouseover', function (e) {
+    if (e.target.closest('a')) {
         soundMenu();
         current.classList.remove('arrow');
         current = e.target.closest('a');
@@ -95,8 +108,8 @@ document.body.addEventListener('mouseover',function (e){
     }
 });
 
-document.body.addEventListener('mouseout',function (e){
-    if(e.target.closest('a')){
+document.body.addEventListener('mouseout', function (e) {
+    if (e.target.closest('a')) {
 
         e.target.closest('a').classList.remove('arrow');
         current.classList.add('arrow');
