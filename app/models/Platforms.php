@@ -23,9 +23,9 @@ class Platforms
 
     public function addPlatform($name)
     {
-        $stmt=$this->pdo->prepare("INSERT INTO platforms (name) VALUE (:name) ");
+        $stmt = $this->pdo->prepare("INSERT INTO platforms (name) VALUE (:name) ");
         $stmt->execute([
-            'name'=>$name
+            'name' => $name
         ]);
     }
 
@@ -44,6 +44,15 @@ class Platforms
         $stmt->execute([
             "id" => $id
         ]);
+    }
+
+    public function getPlatform($id)
+    {
+        $stmt=$this->pdo->prepare("SELECT name FROM platforms p JOIN platforms_in_games pg on p.id = pg.id_platform WHERE pg.id_game =:id");
+        $stmt->execute([
+            "id"=>$id
+        ]);
+        return $stmt->fetchAll();
     }
 
 

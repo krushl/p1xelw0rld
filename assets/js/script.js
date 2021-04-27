@@ -45,9 +45,9 @@ loadScreen.focus();
 current.classList.add('arrow')
 
 // authentication
-// let authentication = ['a','u','t','h','e','n','t','i','c','a','t','i','o','n'];
+let authentication = ['a','u','t','h','e','n','t','i','c','a','t','i','o','n'];
 let authCodePosition=0;
-let auth =['a','u','t','h'];
+// let auth =['a','u','t','h'];
 count = 0;
 console.log(loadScreen);
 document.body.addEventListener('keydown', function (e) {

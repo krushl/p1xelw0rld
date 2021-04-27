@@ -45,4 +45,12 @@ class Genres
         return $stmt->fetchAll();
     }
 
+    public function getGenre($id){
+        $stmt = $this->pdo->prepare("SELECT genre FROM genres g JOIN genres_in_games gig on g.id = gig.id_genre WHERE gig.id_game = :id");
+        $stmt->execute([
+            "id"=>$id
+        ]);
+        return $stmt->fetchAll();
+    }
+
 }

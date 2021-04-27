@@ -35,14 +35,14 @@ class Games
                 $this->addData('id_genre', 'id_game', "genres_in_games", $v, $id);
             }
             foreach ($data['platform'] as $v) {
-                $this->addData('platform_id', 'game_id', "platforms_in_games", $v, $id);
+                $this->addData('id_platform', 'id_game', "platforms_in_games", $v, $id);
             }
             foreach ($data['images'] as $v) {
-                $stmt=$this->pdo->prepare("INSERT INTO screenshots (origName, id_game)
+                $stmt = $this->pdo->prepare("INSERT INTO screenshots (origName, id_game)
                                                     VALUES (:origName,:id_game)");
                 $stmt->execute([
-                    "origName"=>$v,
-                    "id_game"=>$id
+                    "origName" => $v,
+                    "id_game" => $id
                 ]);
             }
         }
@@ -68,7 +68,7 @@ class Games
             "description" => $description,
             "file" => $file
         ]);
-        $this->editData('id_platform','id_game','platforms_in_game');
+        $this->editData('id_platform', 'id_game', 'platforms_in_game');
     }
 
     public function getAllGames()
@@ -79,10 +79,26 @@ class Games
 
     public function getGame($id)
     {
+//        $stmt = $this->pdo->prepare("SELECT * FROM games WHERE id=:id");
         $stmt = $this->pdo->prepare("SELECT * FROM games WHERE id=:id");
         $stmt->execute([
             "id" => $id
         ]);
         return $stmt->fetch();
+    }
+
+    public function getImages($id)
+    {
+        $stmt = $this->pdo->prepare("SELECT * FROM screenshots WHERE id_game = :id");
+        $stmt->execute([
+            'id' => $id,
+        ]);
+
+        return $stmt->fetchAll();
+    }
+
+    public function getGenre($id)
+    {
+        return $this->getData();
     }
 }

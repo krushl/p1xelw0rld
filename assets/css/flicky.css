@@ -17,6 +17,14 @@ https://flickity.metafizzy.co
 
 
 }
+.screenshots{
+    width: 100%;
+
+
+}
+.screenshots-cell{
+    width: 100%;
+}
 
 .gallery-cell {
     width: 100%;
