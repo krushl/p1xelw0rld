@@ -1,20 +1,38 @@
 <?php
+
+namespace App\models;
 include $_SERVER['DOCUMENT_ROOT'] . "/bootstrap.php";
 
+$platforms = $dataPlatform->getAllPlatform();
+$genres = $dataGenre->getAllGenre();
 if (isset($_POST['btnSubmit'])) {
-    $name = $_POST['name'];
-    $platform[]=$_POST['platform'];
-    $banner = $_FILES['banner']['name'];
-    $description = $_POST['description'];
-    $file = $_FILES['file']['name'];
-    foreach($platform as $v){
-        $dataGames->addGame($name,(int)$v,$banner,$description,$file);
+
+    $data['name'] = Validator::preProcessing($_POST['name']);
+    $data['platform'] = $_POST['platform'];
+    $data['genre'] = $_POST['genre'];
+    $data['description'] = Validator::preProcessing($_POST['description']);
+
+    [$errors, $gameName] = FileHandler::uploadFile('file', $validTypesApp, "/assets/gamesFiles/".$data['name']."/",100);
+
+    if (empty($errors)) {
+        $data['file'] = $gameName;
+        var_dump($errors);
+        var_dump($data['file']);
+    }
+    [$errors, $screeshotsName] = FileHandler::uploadFiles('screenshots', $validTypesImages,"/assets/gamesImages/".$data['name']."/screenshots/");
+    if (empty($errors)) {
+        $data['images'] = $screeshotsName;
+        var_dump($data['images']);
+    }
+    [$errors,$bannerName]=FileHandler::uploadFile('banner', $validTypesImages, "/assets/gamesImages/".$data['name']."/banner/");
+    if (empty($errors)) {
+        $data['banner']  =  $bannerName;
     }
 
-    echo "cool";
-}else{
-    echo "not cool";
+    $dataGames->addGame($data);
+
 }
 
-include $_SERVER['DOCUMENT_ROOT']."/routes/adminPanel/games/games.view.php";
+
+include $_SERVER['DOCUMENT_ROOT'] . "/routes/adminPanel/games/games.view.php";
 

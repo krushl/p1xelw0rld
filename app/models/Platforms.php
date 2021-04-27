@@ -31,7 +31,7 @@ class Platforms
 
     public function editPlatform($id, $name)
     {
-        $stmt = $this->pdo->prepare("UPDATE platforms SET name=:name WHERE id_platform=:id");
+        $stmt = $this->pdo->prepare("UPDATE platforms SET name=:name WHERE id=:id");
         $stmt->execute([
             "id" => $id,
             "name" => $name
@@ -40,7 +40,7 @@ class Platforms
 
     public function deletePlatform($id)
     {
-        $stmt = $this->pdo->prepare("DELETE FROM platforms WHERE id_platform=:id");
+        $stmt = $this->pdo->prepare("DELETE FROM platforms WHERE id=:id");
         $stmt->execute([
             "id" => $id
         ]);

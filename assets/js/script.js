@@ -7,12 +7,20 @@ let panelBtn = document.querySelectorAll(".panel-button");
 
 for (let i = 0; i < panelBtn.length; i++) {
     panelBtn[i].addEventListener('click', function () {
+        let panelLast = panelBtn[i].previousElementSibling;
+        console.log(panelLast);
         let panel = panelBtn[i].nextElementSibling;
+        let panelNext = panel.nextElementSibling;
         if (panel.style.display === "block") {
             panel.style.display = "none";
+
         } else {
+
             panel.style.display = "block";
+            panelLast.style.display="none";
+            document.querySelector('.panel-logo').style.display="block";
         }
+
     })
 }
 

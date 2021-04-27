@@ -24,7 +24,7 @@ class Genres
 
     public function editGenre($id, $genre)
     {
-        $stmt = $this->pdo->prepare("UPDATE genres SET genre = :genre WHERE id_genre = :id");
+        $stmt = $this->pdo->prepare("UPDATE genres SET genre = :genre WHERE id = :id");
         $stmt->execute([
             "id" => $id,
             "genre" => $genre
@@ -33,7 +33,7 @@ class Genres
 
     public function deleteGenre($id)
     {
-        $stmt = $this->pdo->prepare("DELETE FROM genres WHERE id_genre =:id");
+        $stmt = $this->pdo->prepare("DELETE FROM genres WHERE id =:id");
         $stmt->execute([
             "id" => $id
         ]);

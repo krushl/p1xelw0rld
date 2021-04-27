@@ -9,16 +9,49 @@
 <!--            <li class="panel-item"><a  href="newAdmin/">add new admin</a></li>-->
 <!--        </ul>-->
         <button class="panel-button"> Games </button>
-        <div class="panel-item">
-            ffff
+        <div class="panel-menu">
+            <ul>
+                <li class="panel-item"><a href="">ADD</a></li>
+                <li class="panel-item"><a href="">EDIT</a></li>
+                <li class="panel-item"><a href="">DELETE</a></li>
+                <li class="panel-item"><a href="">VIEW</a></li>
+            </ul>
         </div>
         <button class="panel-button"> Emulators </button>
-        <div class="panel-item">
-            ffff
+        <div class="panel-menu">
+            <ul>
+                <li class="panel-item"><a href="">ADD</a></li>
+                <li class="panel-item"><a href="">EDIT</a></li>
+                <li class="panel-item"><a href="">DELETE</a></li>
+                <li class="panel-item"><a href="">VIEW</a></li>
+            </ul>
         </div>
         <button class="panel-button"> Articles </button>
-        <div class="panel-item">
-            ffff
+        <div class="panel-menu">
+            <ul>
+                <li class="panel-item"><a href="">ADD</a></li>
+                <li class="panel-item"><a href="">EDIT</a></li>
+                <li class="panel-item"><a href="">DELETE</a></li>
+                <li class="panel-item"><a href="">VIEW</a></li>
+            </ul>
+        </div>
+        <button class="panel-button"> Genres </button>
+        <div class="panel-menu">
+            <ul>
+                <li class="panel-item"><a href="">ADD</a></li>
+                <li class="panel-item"><a href="">EDIT</a></li>
+                <li class="panel-item"><a href="">DELETE</a></li>
+                <li class="panel-item"><a href="">VIEW</a></li>
+            </ul>
+        </div>
+        <button class="panel-button"> Platforms</button>
+        <div class="panel-menu">
+            <ul>
+                <li class="panel-item"><a href="">ADD</a></li>
+                <li class="panel-item"><a href="">EDIT</a></li>
+                <li class="panel-item"><a href="">DELETE</a></li>
+                <li class="panel-item"><a href="">VIEW</a></li>
+            </ul>
         </div>
         <button class="panel-button"><a href="newAdmin/">Add new admin</a></button>
     </div>
