@@ -16,7 +16,7 @@ class Genres
 
     public function addGenre($genre)
     {
-        $stmt = $this->pdo->prepare("INSERT INTO genres VALUE (genre=:genre)");
+        $stmt = $this->pdo->prepare("INSERT INTO genres (genre) VALUES (:genre)");
         $stmt->execute([
             "genre" => $genre
         ]);

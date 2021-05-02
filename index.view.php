@@ -3,7 +3,7 @@
     <div class="logoScreen__bg">
         <div class="logoStart">
             <h1 class="logoStart__text">
-                PIXELWORLD
+                P1XELW0RLD
             </h1>
         </div>
         <h3 id="start" class="start blink">PRESS ANY KEY</h3>
@@ -13,15 +13,15 @@
 <div class="nav" id="menu">
     <div class="logoMenu">
         <h2 class="logoMenu__text">
-            PIXELWORLD
+            P1XELW0RLD
         </h2>
     </div>
     <ul>
         <div id="navMenu">
-            <li class="menu" id="games" ><a href="/routes/games/index.php">GAMES</a></li>
-            <li class="menu" id="emulators"><a href="/routes/emulators/index.php">EMULATORS</a></li>
-            <li class="menu" id="options" ><a href="/routes/options/index.php">OPTIONS</a></li>
-            <li class="menu" id="howToPlay"><a href="/routes/howToPlay/index.php">HOW TO PLAY</a></li>
+            <li class="menu" id="games" ><a href="/routes/games/">GAMES</a></li>
+            <li class="menu" id="emulators"><a href="/routes/emulators/">EMULATORS</a></li>
+            <li class="menu" id="howToPlay"><a href="/routes/howToPlay/">HOW TO PLAY</a></li>
+            <li class="menu" id="options" ><a href="/routes/about/">ABOUT</a></li>
 
         </div>
 

@@ -11,4 +11,5 @@
             <button type="submit" name="btnSubmit" class="login-btn">register</button>
         </form>
     </div>
+    <a class="back" href="/routes/adminPanel/">BACK</a>
 <?php include $_SERVER['DOCUMENT_ROOT']."/templates/footer.view.php";?>

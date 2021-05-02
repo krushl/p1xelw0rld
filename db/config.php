@@ -12,4 +12,3 @@ const CONN = [
 
 $validTypesImages = ['image/jpeg','image/png','image/gif'];
 $validTypesApp = ['application/zip','application/x-rar-compressed','application/x-zip-compressed','application/rar'];
-$token = "AQAAAAAQKk10AADLWxAsjo_YCkC7m3C_LqbEXIc";

@@ -2,7 +2,7 @@
 namespace App\models;
 include $_SERVER['DOCUMENT_ROOT'] . "/bootstrap.php";
 
-$id = $_GET['id'] ?? 1 ;
+$id = $_GET['id'];
 
 $game = $dataGames->getGame($id);
 $images = $dataGames->getImages($id);

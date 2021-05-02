@@ -1,8 +1,17 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/templates/header.view.php" ?>
+
 <div class="container">
-    <div class="options">
-        <h1 class="about-title ">EMULATOR-NAME</h1>
-        <div class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cupiditate doloremque esse exercitationem fuga hic incidunt inventore nihil praesentium, quis.</div>
-    </div>
+    <div class="wrapper">
+        <h1 class="emulator-title "><?=$emulator->name?></h1>
+        <div class="emulator">
+            <?= $emulator->description?>
+
+
+        </div>
+
+        <a class="pixel-button" href="/assets/emulators/<?=$emulator->file?>" download>Скачать</a>
 </div>
+</div>
+
+    <a class="back"  href="../">BACK</a>
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/templates/footer.view.php" ?>

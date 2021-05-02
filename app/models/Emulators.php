@@ -14,14 +14,14 @@ class Emulators
         $this->pdo = $pdo;
     }
 
-    public function addEmulator($name, $description, $file, $id_platform)
+    public function addEmulator($data)
     {
         $stmt = $this->pdo->prepare("INSERT INTO emulators (name, description, file, id_platform) VALUES (:name,:description,:file,:id_platform)");
         $stmt->execute([
-            "name" => $name,
-            "description" => $description,
-            "file" => $file,
-            "id_platform" => $id_platform
+            "name" => $data['name'],
+            "description" => $data['description'],
+            "file" => $data['file'],
+            "id_platform" => $data['platform']
         ]);
     }
 
@@ -39,10 +39,19 @@ class Emulators
         $stmt->execute([
             "id" => $id,
             "name" => $name,
-            "description"=>$description,
-            "file"=>$file,
-            "id_platform"=>$id_platform
+            "description" => $description,
+            "file" => $file,
+            "id_platform" => $id_platform
         ]);
+    }
+
+    public function getAllEmulators($id)
+    {
+        $stmt = $this->pdo->prepare("SELECT * FROM emulators e WHERE e.id_platform = :id");
+        $stmt->execute([
+            "id"=>$id
+        ]);
+        return $stmt->fetch();
     }
 
 }

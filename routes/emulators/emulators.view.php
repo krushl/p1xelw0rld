@@ -1,23 +1,16 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/templates/header.view.php' ?>
 <div class="container-emulators">
-    <a href="/routes/emulators/emulator/index.php">
-        <div class="emulator">
-            <div class="emulator-image"><img src="/assets/img/sega.png"></div>
-            <div class="emulator-title">SEGA</div>
-        </div>
-    </a>
-    <a href="/routes/emulators/emulator/index.php">
-        <div class="emulator">
-            <div class="emulator-image"><img src="/assets/img/dendy.png"></div>
-            <div class="emulator-title">DENDY</div>
-        </div>
-    </a>
-    <a href="/routes/emulators/emulator/index.php">
-        <div class="emulator">
-            <div class="emulator-image"><img src="/assets/img/snes.png"></div>
-            <div class="emulator-title">SNES</div>
-        </div>
-    </a>
+    <?php foreach ($platforms as $platform): ?>
+        <a href="/routes/emulators/emulator/index.php?id=<?= $platform->id ?>">
+            <div class="emulators">
+                <div class="emulators-image"><img src="/assets/img/<?= $platform->name ?>.png" alt="<?= $platform->name ?>">
+                </div>
+                <div class="emulators-title"><?= $platform->name ?></div>
+            </div>
+        </a>
+    <?php endforeach; ?>
+
 </div>
+<a class="back"  href="/">BACK</a>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/templates/footer.view.php' ?>

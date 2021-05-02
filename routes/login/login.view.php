@@ -11,4 +11,5 @@
         <button type="submit" name="btnSubmit" class="login-btn">LOGIN</button>
     </form>
 </div>
+    <a class="back" href="/">BACK</a>
 <?php include $_SERVER['DOCUMENT_ROOT']."/templates/footer.view.php";?>

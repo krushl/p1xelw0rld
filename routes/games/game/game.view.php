@@ -35,9 +35,6 @@
         </div>
 
     </div>
-
-
+    <a class="back"  href="../">BACK</a>
     <script src="/assets/js/flicky.js"></script>
-
-
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/templates/footer.view.php"; ?>

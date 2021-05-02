@@ -1,9 +1,10 @@
 <?php
 session_start();
-//include __DIR__.'/vendor/autoload.php';
+
 
 use App\db\Connect;
 use App\models\Admin;
+use App\models\Emulators;
 use App\models\Games;
 use App\models\Genres;
 use App\models\Platforms;
@@ -18,6 +19,7 @@ include $_SERVER['DOCUMENT_ROOT']."/app/models/Games.php";
 include $_SERVER['DOCUMENT_ROOT']."/app/models/Platforms.php";
 include $_SERVER['DOCUMENT_ROOT']."/app/models/Genres.php";
 include $_SERVER['DOCUMENT_ROOT']."/app/models/FileHandler.php";
+include $_SERVER['DOCUMENT_ROOT']."/app/models/Emulators.php";
 
 
 $conn = Connect::make(CONN);
@@ -26,3 +28,4 @@ $dataAdmin = new Admin($conn);
 $dataGames = new Games($conn);
 $dataPlatform = new Platforms($conn);
 $dataGenre = new Genres($conn);
+$dataEmulator = new Emulators($conn);

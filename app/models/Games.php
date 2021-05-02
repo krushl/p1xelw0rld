@@ -69,6 +69,7 @@ class Games
             "file" => $file
         ]);
         $this->editData('id_platform', 'id_game', 'platforms_in_game');
+
     }
 
     public function getAllGames()
@@ -79,7 +80,7 @@ class Games
 
     public function getGame($id)
     {
-//        $stmt = $this->pdo->prepare("SELECT * FROM games WHERE id=:id");
+
         $stmt = $this->pdo->prepare("SELECT * FROM games WHERE id=:id");
         $stmt->execute([
             "id" => $id
@@ -97,8 +98,4 @@ class Games
         return $stmt->fetchAll();
     }
 
-    public function getGenre($id)
-    {
-        return $this->getData();
-    }
 }
