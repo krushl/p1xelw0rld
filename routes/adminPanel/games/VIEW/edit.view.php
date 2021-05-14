@@ -1,7 +1,7 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/templates/header.view.php"; ?>
 <div class="container">
     <form method="post" action="edit.php" enctype="multipart/form-data" class="panel-form">-->
-                <input type="text"  class="panel-input" name="name" value="<?= $_SESSION['name']?>"placeholder="Имя игры">
+                <input type="text"  class="panel-input" name="name" placeholder="Имя игры">
                <label class="panel-label" for="banner">
                 Добавить баннер
                    <input type="file" name="banner" class="panel-input" id="banner">
@@ -10,7 +10,7 @@
                     Добавить скриншоты
                 <input type="file" name="screenshots[]" multiple class="panel-input" id="screenshots">
                 </label>
-                <textarea name="description" class="panel-input" placeholder="Описание"><?= $_SESSION['description']?></textarea>
+                <textarea name="description" class="panel-input" placeholder="Описание"></textarea>
                 <select name="platform[]" multiple class="panel-input">
                     <?php foreach ($platforms as $v): ?>
                         <option value="<?= $v->id?>"> <?= $v->name ?></option>
@@ -25,7 +25,7 @@
                     Добавить игру
                 <input type="file" name="file" class="panel-input" id="game">
                 </label>
-                <input type="submit" name="btnSubmit" class="panel-input">
+                <input type="submit" name="btnEdit" class="panel-input">
             </form>
 </div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/templates/footer.view.php"; ?>

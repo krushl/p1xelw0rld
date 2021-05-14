@@ -45,7 +45,13 @@ class Emulators
         ]);
     }
 
-    public function getAllEmulators($id)
+    public function getAllEmulators()
+    {
+        $stmt = $this->pdo->query("SELECT * FROM emulators");
+
+        return $stmt->fetchAll();
+    }
+    public function getEmulators($id)
     {
         $stmt = $this->pdo->prepare("SELECT * FROM emulators e WHERE e.id_platform = :id");
         $stmt->execute([

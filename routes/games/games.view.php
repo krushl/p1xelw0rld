@@ -5,7 +5,6 @@
              data-flickity-options='{"pageDots":" false","freeScroll":"true"}' style="padding:0">
             <?php foreach ($sliderCeil as $ceil): ?>
             <div class="gallery-cell">
-
                     <div class="container-games">
                         <?php foreach ($ceil as $game): ?>
                             <a href="/routes/games/game/?id=<?= $game->id ?>">
@@ -18,13 +17,10 @@
                             </a>
                         <?php endforeach; ?>
                     </div>
-
             </div>
             <?php endforeach; ?>
         </div>
     </div>
     <a class="back"  href="/">BACK</a>
     <script src="/assets/js/flicky.js"></script>
-
-
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/templates/footer.view.php"; ?>

@@ -4,7 +4,17 @@
         <div class="description">
             <?= $game->description ?>
         </div>
-        <div style="display:grid;grid-template-columns: 600px 600px;align-content: center;padding:1em;">
+        <div class="description-items">
+            <div class="screenshots js-flickity"
+                 data-flickity-options='{"pageDots":" false","freeScroll":"true"}'>
+                <?php foreach ($images as $v): ?>
+                    <div class="screenshot-cell">
+                        <img class="screenshot"
+                             src="/assets/gamesImages/<?= $game->name ?>/screenshots/<?= $v->origName ?>"
+                             alt="<?= $v->origName ?>">
+                    </div>
+                <?php endforeach; ?>
+            </div>
             <div class="game-items">
                 <div>
                     <div>Жанр:
@@ -22,16 +32,7 @@
                         игру</a>
                 </div>
             </div>
-            <div class="screenshots js-flickity"
-                 data-flickity-options='{"pageDots":" false","freeScroll":"true"}'>
-                <?php foreach ($images as $v): ?>
-                    <div class="screenshot-cell">
-                        <img class="screenshot"
-                             src="/assets/gamesImages/<?= $game->name ?>/screenshots/<?= $v->origName ?>"
-                             alt="">
-                    </div>
-                <?php endforeach; ?>
-            </div>
+
         </div>
 
     </div>

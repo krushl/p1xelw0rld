@@ -1,5 +1,5 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/templates/header.view.php"; ?>
-<div class="container">
+<div class="container-htp">
     <div class="wrapper">
         <h1 class="wrapper-title">How start to playing</h1>
         <div class="wrapper-description">

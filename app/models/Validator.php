@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\models;
-
 
 class Validator
 {
@@ -25,3 +23,4 @@ class Validator
         return true;
     }
 }
+

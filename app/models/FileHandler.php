@@ -3,16 +3,24 @@
 namespace App\Models;
 
 class FileHandler
-{
-    public static function uploadFiles($fieldName, $validTypes, $dirName, $maxSize = 15)
+{   //TODO Метод для загрузки нескольких файлов
+    /**
+     * @param $fieldName
+     * @param $validTypes
+     * @param $dirName
+     * @param int $maxSize
+     * @return array
+     */
+     public static function uploadFiles($fieldName, $validTypes, $dirName, $maxSize = 15)
     {
         $errors = "";
         $names = [];
         $path = $_SERVER['DOCUMENT_ROOT'] . $dirName;
+        //TODO Создание пути для файлов
         if (!is_dir($path)) {
             mkdir($path, 0777, true);
         }
-
+        //TODO Загрузка файла
         foreach ($_FILES[$fieldName]["error"] as $key => $error) {
             if ($error == UPLOAD_ERR_OK) {
                 $file_tmp_name = $_FILES[$fieldName]["tmp_name"][$key];
